@@ -1,0 +1,419 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 51;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		331578A1069FAA7782546191 /* Pods_Parkour.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B63CF6919A171D60E7F4CF08 /* Pods_Parkour.framework */; };
+		789A9080232FB37A00A8970C /* 3532-car.json in Resources */ = {isa = PBXBuildFile; fileRef = 789A907F232FB37A00A8970C /* 3532-car.json */; };
+		78C7054E232BCBCC00E45965 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78C7054D232BCBCC00E45965 /* AppDelegate.swift */; };
+		78C70550232BCBCC00E45965 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78C7054F232BCBCC00E45965 /* ViewController.swift */; };
+		78C70553232BCBCC00E45965 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 78C70551232BCBCC00E45965 /* Main.storyboard */; };
+		78C70555232BCBD000E45965 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 78C70554232BCBD000E45965 /* Assets.xcassets */; };
+		78C70558232BCBD000E45965 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 78C70556232BCBD000E45965 /* LaunchScreen.storyboard */; };
+		78DE2550232FB91C0034F73F /* Meslo LG L Bold for Powerline.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 789A907E232FB0E300A8970C /* Meslo LG L Bold for Powerline.ttf */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		789A907E232FB0E300A8970C /* Meslo LG L Bold for Powerline.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Meslo LG L Bold for Powerline.ttf"; sourceTree = "<group>"; };
+		789A907F232FB37A00A8970C /* 3532-car.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "3532-car.json"; sourceTree = "<group>"; };
+		78C7054A232BCBCC00E45965 /* Parkour.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Parkour.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		78C7054D232BCBCC00E45965 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		78C7054F232BCBCC00E45965 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		78C70552232BCBCC00E45965 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		78C70554232BCBD000E45965 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		78C70557232BCBD000E45965 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		78C70559232BCBD000E45965 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8213CB3F6B9F2ACC204DA2E7 /* Pods-Parkour.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Parkour.release.xcconfig"; path = "Target Support Files/Pods-Parkour/Pods-Parkour.release.xcconfig"; sourceTree = "<group>"; };
+		B63CF6919A171D60E7F4CF08 /* Pods_Parkour.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Parkour.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B9D1F16344A642FE44137820 /* Pods-Parkour.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Parkour.debug.xcconfig"; path = "Target Support Files/Pods-Parkour/Pods-Parkour.debug.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		78C70547232BCBCC00E45965 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				331578A1069FAA7782546191 /* Pods_Parkour.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		78C70541232BCBCC00E45965 = {
+			isa = PBXGroup;
+			children = (
+				78C7054C232BCBCC00E45965 /* Parkour */,
+				78C7054B232BCBCC00E45965 /* Products */,
+				B5F7AF4A2D2BA5D1D0797DD7 /* Pods */,
+				B4616C771E6BF81D424BFAB3 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		78C7054B232BCBCC00E45965 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				78C7054A232BCBCC00E45965 /* Parkour.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		78C7054C232BCBCC00E45965 /* Parkour */ = {
+			isa = PBXGroup;
+			children = (
+				78C7054D232BCBCC00E45965 /* AppDelegate.swift */,
+				78C7054F232BCBCC00E45965 /* ViewController.swift */,
+				78C70551232BCBCC00E45965 /* Main.storyboard */,
+				78C70554232BCBD000E45965 /* Assets.xcassets */,
+				78C70556232BCBD000E45965 /* LaunchScreen.storyboard */,
+				78C70559232BCBD000E45965 /* Info.plist */,
+				789A907F232FB37A00A8970C /* 3532-car.json */,
+				789A907E232FB0E300A8970C /* Meslo LG L Bold for Powerline.ttf */,
+			);
+			path = Parkour;
+			sourceTree = "<group>";
+		};
+		B4616C771E6BF81D424BFAB3 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				B63CF6919A171D60E7F4CF08 /* Pods_Parkour.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		B5F7AF4A2D2BA5D1D0797DD7 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				B9D1F16344A642FE44137820 /* Pods-Parkour.debug.xcconfig */,
+				8213CB3F6B9F2ACC204DA2E7 /* Pods-Parkour.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		78C70549232BCBCC00E45965 /* Parkour */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 78C7055C232BCBD000E45965 /* Build configuration list for PBXNativeTarget "Parkour" */;
+			buildPhases = (
+				350F5BA793191AC8AB88A19F /* [CP] Check Pods Manifest.lock */,
+				78C70546232BCBCC00E45965 /* Sources */,
+				78C70547232BCBCC00E45965 /* Frameworks */,
+				78C70548232BCBCC00E45965 /* Resources */,
+				8C2353996CCC39A495A4F73C /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Parkour;
+			productName = Parkour;
+			productReference = 78C7054A232BCBCC00E45965 /* Parkour.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		78C70542232BCBCC00E45965 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1020;
+				LastUpgradeCheck = 1020;
+				ORGANIZATIONNAME = "Tushar Singh";
+				TargetAttributes = {
+					78C70549232BCBCC00E45965 = {
+						CreatedOnToolsVersion = 10.2.1;
+					};
+				};
+			};
+			buildConfigurationList = 78C70545232BCBCC00E45965 /* Build configuration list for PBXProject "Parkour" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 78C70541232BCBCC00E45965;
+			productRefGroup = 78C7054B232BCBCC00E45965 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				78C70549232BCBCC00E45965 /* Parkour */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		78C70548232BCBCC00E45965 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				78C70558232BCBD000E45965 /* LaunchScreen.storyboard in Resources */,
+				78DE2550232FB91C0034F73F /* Meslo LG L Bold for Powerline.ttf in Resources */,
+				789A9080232FB37A00A8970C /* 3532-car.json in Resources */,
+				78C70555232BCBD000E45965 /* Assets.xcassets in Resources */,
+				78C70553232BCBCC00E45965 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		350F5BA793191AC8AB88A19F /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Parkour-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		8C2353996CCC39A495A4F73C /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Parkour/Pods-Parkour-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Parkour/Pods-Parkour-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Parkour/Pods-Parkour-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		78C70546232BCBCC00E45965 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				78C70550232BCBCC00E45965 /* ViewController.swift in Sources */,
+				78C7054E232BCBCC00E45965 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		78C70551232BCBCC00E45965 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				78C70552232BCBCC00E45965 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		78C70556232BCBD000E45965 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				78C70557232BCBD000E45965 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		78C7055A232BCBD000E45965 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		78C7055B232BCBD000E45965 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		78C7055D232BCBD000E45965 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = B9D1F16344A642FE44137820 /* Pods-Parkour.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = SDDB7WX63J;
+				INFOPLIST_FILE = Parkour/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = Tushar.Parkour;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		78C7055E232BCBD000E45965 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8213CB3F6B9F2ACC204DA2E7 /* Pods-Parkour.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = SDDB7WX63J;
+				INFOPLIST_FILE = Parkour/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = Tushar.Parkour;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		78C70545232BCBCC00E45965 /* Build configuration list for PBXProject "Parkour" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				78C7055A232BCBD000E45965 /* Debug */,
+				78C7055B232BCBD000E45965 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		78C7055C232BCBD000E45965 /* Build configuration list for PBXNativeTarget "Parkour" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				78C7055D232BCBD000E45965 /* Debug */,
+				78C7055E232BCBD000E45965 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 78C70542232BCBCC00E45965 /* Project object */;
+}
