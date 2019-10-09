@@ -12,9 +12,13 @@ class ViewController: UIViewController {
 
     
 let animView = AnimationView()
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
         animView.frame = CGRect(x: 67, y: 110, width: 240, height: 206)
         view.addSubview(animView)
         let anim = Animation.named("3532-car")
