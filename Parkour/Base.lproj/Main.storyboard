@@ -115,40 +115,46 @@
                                 <state key="normal" backgroundImage="location">
                                     <color key="titleColor" red="0.94117647059999998" green="1" blue="0.25098039220000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
+                                <connections>
+                                    <segue destination="D2N-Xf-P5n" kind="show" id="8gd-NX-ZZv"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="0.94117647059999998" green="1" blue="0.25098039220000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <viewLayoutGuide key="safeArea" id="DPP-CF-VKD"/>
                     </view>
                     <navigationItem key="navigationItem" id="w6f-PK-VPb"/>
-                    <connections>
-                        <segue destination="D2N-Xf-P5n" kind="show" id="NI6-aj-ukY"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="YjI-a7-0jH" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="812" y="974.6626686656673"/>
         </scene>
-        <!--View Controller-->
+        <!--Map View Controller-->
         <scene sceneID="oyE-z1-rao">
             <objects>
-                <viewController id="D2N-Xf-P5n" sceneMemberID="viewController">
+                <viewController id="D2N-Xf-P5n" customClass="MapViewController" customModule="Parkour" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Z92-GU-a30">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="0Jw-vp-yBR">
+                                <rect key="frame" x="0.0" y="208" width="375" height="459"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </mapView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.94117647059999998" green="1" blue="0.25098039220000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <viewLayoutGuide key="safeArea" id="zbm-1H-ue1"/>
                     </view>
                     <navigationItem key="navigationItem" id="DoU-ap-fWb"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fHw-zN-EXQ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1606" y="975"/>
+            <point key="canvasLocation" x="1605.5999999999999" y="974.6626686656673"/>
         </scene>
-        <!--View Controller-->
+        <!--Sign Up View Controller-->
         <scene sceneID="DbI-0N-DVK">
             <objects>
-                <viewController id="v1Q-pY-z3u" sceneMemberID="viewController">
+                <viewController id="v1Q-pY-z3u" customClass="SignUpViewController" customModule="Parkour" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="oeJ-JC-w69">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -244,12 +250,18 @@
                                 <state key="normal" title="LOGIN">
                                     <color key="titleColor" red="0.94117647059999998" green="1" blue="0.25098039220000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
+                                <connections>
+                                    <action selector="signUpButton:" destination="v1Q-pY-z3u" eventType="touchUpInside" id="WWb-LV-RWF"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="0.94117647059999998" green="1" blue="0.25098039220000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <viewLayoutGuide key="safeArea" id="ZIk-9U-hV1"/>
                     </view>
                     <connections>
+                        <outlet property="nameTF" destination="QgW-h1-bkr" id="T7N-Zm-PJc"/>
+                        <outlet property="passwordTF" destination="HZW-d5-Byj" id="BhD-yk-jz6"/>
+                        <outlet property="usernamTF" destination="HfV-jv-ymz" id="Xr0-OR-6gk"/>
                         <segue destination="66D-XQ-khF" kind="show" identifier="1" id="DN0-Aq-DWf"/>
                     </connections>
                 </viewController>
@@ -257,10 +269,10 @@
             </objects>
             <point key="canvasLocation" x="-143" y="175"/>
         </scene>
-        <!--View Controller-->
+        <!--Login View Controller-->
         <scene sceneID="UJq-Uw-mdr">
             <objects>
-                <viewController id="6NE-oV-LAt" sceneMemberID="viewController">
+                <viewController id="6NE-oV-LAt" customClass="LoginViewController" customModule="Parkour" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="380-Js-mgm">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -322,6 +334,9 @@
                                 <state key="normal" title="LOGIN">
                                     <color key="titleColor" red="0.2901960784" green="0.12941176469999999" blue="0.3921568627" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
+                                <connections>
+                                    <action selector="loginButton:" destination="6NE-oV-LAt" eventType="touchUpInside" id="aCB-Zc-Xd5"/>
+                                </connections>
                             </button>
                             <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Xc5-cj-8ax">
                                 <rect key="frame" x="148" y="281" width="211" height="34"/>
@@ -336,6 +351,8 @@
                         <viewLayoutGuide key="safeArea" id="18z-SE-Twe"/>
                     </view>
                     <connections>
+                        <outlet property="passworTF" destination="Xc5-cj-8ax" id="uTO-Od-jL3"/>
+                        <outlet property="userNameTF" destination="Fvm-H0-dkY" id="FSt-Yq-lLJ"/>
                         <segue destination="66D-XQ-khF" kind="show" identifier="1" id="cpS-nT-LMS"/>
                     </connections>
                 </viewController>
