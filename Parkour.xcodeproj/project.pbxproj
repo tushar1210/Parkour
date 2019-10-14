@@ -11,6 +11,10 @@
 		7824003F234E6CC80014452F /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7824003E234E6CC80014452F /* HomeViewController.swift */; };
 		789A9080232FB37A00A8970C /* 3532-car.json in Resources */ = {isa = PBXBuildFile; fileRef = 789A907F232FB37A00A8970C /* 3532-car.json */; };
 		78B41685234E7C38004FD3B6 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 78B41684234E7C37004FD3B6 /* GoogleService-Info.plist */; };
+		78B41687234ED8C8004FD3B6 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78B41686234ED8C8004FD3B6 /* LoginViewController.swift */; };
+		78B41689234ED8D3004FD3B6 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78B41688234ED8D3004FD3B6 /* SignUpViewController.swift */; };
+		78B4168B234ED8E1004FD3B6 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78B4168A234ED8E1004FD3B6 /* Constants.swift */; };
+		78B4168D234ED93C004FD3B6 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78B4168C234ED93C004FD3B6 /* MapViewController.swift */; };
 		78C7054E232BCBCC00E45965 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78C7054D232BCBCC00E45965 /* AppDelegate.swift */; };
 		78C70550232BCBCC00E45965 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78C7054F232BCBCC00E45965 /* ViewController.swift */; };
 		78C70553232BCBCC00E45965 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 78C70551232BCBCC00E45965 /* Main.storyboard */; };
@@ -24,6 +28,10 @@
 		789A907E232FB0E300A8970C /* Meslo LG L Bold for Powerline.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Meslo LG L Bold for Powerline.ttf"; sourceTree = "<group>"; };
 		789A907F232FB37A00A8970C /* 3532-car.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "3532-car.json"; sourceTree = "<group>"; };
 		78B41684234E7C37004FD3B6 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		78B41686234ED8C8004FD3B6 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		78B41688234ED8D3004FD3B6 /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
+		78B4168A234ED8E1004FD3B6 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		78B4168C234ED93C004FD3B6 /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		78C7054A232BCBCC00E45965 /* Parkour.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Parkour.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		78C7054D232BCBCC00E45965 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		78C7054F232BCBCC00E45965 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -72,6 +80,10 @@
 				78C7054D232BCBCC00E45965 /* AppDelegate.swift */,
 				78C7054F232BCBCC00E45965 /* ViewController.swift */,
 				78C70551232BCBCC00E45965 /* Main.storyboard */,
+				78B4168C234ED93C004FD3B6 /* MapViewController.swift */,
+				78B41686234ED8C8004FD3B6 /* LoginViewController.swift */,
+				78B41688234ED8D3004FD3B6 /* SignUpViewController.swift */,
+				78B4168A234ED8E1004FD3B6 /* Constants.swift */,
 				7824003E234E6CC80014452F /* HomeViewController.swift */,
 				78C70554232BCBD000E45965 /* Assets.xcassets */,
 				78C70556232BCBD000E45965 /* LaunchScreen.storyboard */,
@@ -218,9 +230,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				78B41687234ED8C8004FD3B6 /* LoginViewController.swift in Sources */,
 				78C70550232BCBCC00E45965 /* ViewController.swift in Sources */,
 				78C7054E232BCBCC00E45965 /* AppDelegate.swift in Sources */,
 				7824003F234E6CC80014452F /* HomeViewController.swift in Sources */,
+				78B41689234ED8D3004FD3B6 /* SignUpViewController.swift in Sources */,
+				78B4168B234ED8E1004FD3B6 /* Constants.swift in Sources */,
+				78B4168D234ED93C004FD3B6 /* MapViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

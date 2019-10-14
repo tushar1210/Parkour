@@ -90,17 +90,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qiq-aL-j3E">
-                                <rect key="frame" x="93" y="248" width="188" height="54"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="0.2901960784" green="0.12941176469999999" blue="0.3921568627" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <fontDescription key="fontDescription" name="MesloLGLForPowerline-Bold" family="Meslo LG L for Powerline" pointSize="18"/>
-                                <state key="normal" title="RENT IN A SPACE">
-                                    <color key="titleColor" red="0.94117647059999998" green="1" blue="0.25098039220000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                </state>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZBh-68-tzx">
-                                <rect key="frame" x="93" y="397" width="188" height="54"/>
+                                <rect key="frame" x="93" y="543" width="188" height="54"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.2901960784" green="0.12941176469999999" blue="0.3921568627" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" name="MesloLGLForPowerline-Bold" family="Meslo LG L for Powerline" pointSize="18"/>
@@ -108,11 +99,35 @@
                                     <color key="titleColor" red="0.94117647059999998" green="1" blue="0.25098039220000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0kn-X5-zub">
+                            <button opaque="NO" contentMode="scaleAspectFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0kn-X5-zub">
                                 <rect key="frame" x="301" y="62" width="58" height="55"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.2901960784" green="0.12941176469999999" blue="0.3921568627" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <state key="normal" backgroundImage="location">
+                                    <color key="titleColor" red="0.94117647059999998" green="1" blue="0.25098039220000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="default"/>
+                                </state>
+                                <connections>
+                                    <action selector="locationButton:" destination="Imj-v5-HTw" eventType="touchUpInside" id="d5j-dQ-b91"/>
+                                    <segue destination="D2N-Xf-P5n" kind="show" id="zpU-cf-48g">
+                                        <segue key="commit" inheritsFrom="parent" id="JuV-T8-fqU"/>
+                                        <segue key="preview" inheritsFrom="commit" id="0rD-t6-GWq"/>
+                                    </segue>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Hi" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YaY-AC-QPN">
+                                <rect key="frame" x="16" y="161" width="343" height="78"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="MesloLGLForPowerline-Bold" family="Meslo LG L for Powerline" pointSize="40"/>
+                                <color key="textColor" red="0.2901960784" green="0.12941176469999999" blue="0.3921568627" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qiq-aL-j3E">
+                                <rect key="frame" x="93" y="400" width="188" height="54"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.2901960784" green="0.12941176469999999" blue="0.3921568627" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" name="MesloLGLForPowerline-Bold" family="Meslo LG L for Powerline" pointSize="18"/>
+                                <state key="normal" title="RENT IN A SPACE">
                                     <color key="titleColor" red="0.94117647059999998" green="1" blue="0.25098039220000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                             </button>
@@ -122,52 +137,62 @@
                     </view>
                     <navigationItem key="navigationItem" id="w6f-PK-VPb"/>
                     <connections>
-                        <segue destination="D2N-Xf-P5n" kind="show" id="NI6-aj-ukY"/>
+                        <outlet property="hiLabel" destination="YaY-AC-QPN" id="ovf-K4-1d6"/>
+                        <outlet property="locationButton" destination="0kn-X5-zub" id="Nf0-IC-gjq"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="YjI-a7-0jH" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="812" y="974.6626686656673"/>
+            <point key="canvasLocation" x="3175" y="175"/>
         </scene>
-        <!--View Controller-->
+        <!--Map View Controller-->
         <scene sceneID="oyE-z1-rao">
             <objects>
-                <viewController id="D2N-Xf-P5n" sceneMemberID="viewController">
+                <viewController id="D2N-Xf-P5n" customClass="MapViewController" customModule="Parkour" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Z92-GU-a30">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="0Jw-vp-yBR">
+                                <rect key="frame" x="0.0" y="208" width="375" height="459"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </mapView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="You are at :" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xP0-r2-ola">
+                                <rect key="frame" x="16" y="45" width="343" height="78"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="MesloLGLForPowerline-Bold" family="Meslo LG L for Powerline" pointSize="40"/>
+                                <color key="textColor" red="0.94117647059999998" green="1" blue="0.25098039220000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="C7R-ZR-scB">
+                                <rect key="frame" x="16" y="110" width="343" height="78"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="MesloLGLForPowerline-Bold" family="Meslo LG L for Powerline" pointSize="30"/>
+                                <color key="textColor" red="0.94117647059999998" green="1" blue="0.25098039220000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="0.2901960784" green="0.12941176469999999" blue="0.3921568627" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <viewLayoutGuide key="safeArea" id="zbm-1H-ue1"/>
                     </view>
                     <navigationItem key="navigationItem" id="DoU-ap-fWb"/>
+                    <connections>
+                        <outlet property="locLabel" destination="C7R-ZR-scB" id="BI2-YJ-zOa"/>
+                        <outlet property="locView" destination="0Jw-vp-yBR" id="lvL-b5-RQO"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fHw-zN-EXQ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1606" y="975"/>
+            <point key="canvasLocation" x="3911" y="175"/>
         </scene>
-        <!--View Controller-->
+        <!--Sign Up View Controller-->
         <scene sceneID="DbI-0N-DVK">
             <objects>
-                <viewController id="v1Q-pY-z3u" sceneMemberID="viewController">
+                <viewController id="v1Q-pY-z3u" customClass="SignUpViewController" customModule="Parkour" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="oeJ-JC-w69">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Uq3-Ha-89M">
-                                <rect key="frame" x="19" y="153" width="148" height="57"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <attributedString key="attributedText">
-                                    <fragment content="Username :">
-                                        <attributes>
-                                            <color key="NSColor" red="0.29019607843137252" green="0.12941176470588234" blue="0.39215686274509803" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                            <font key="NSFont" size="20" name="MesloLGLForPowerline-Bold"/>
-                                            <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
-                                        </attributes>
-                                    </fragment>
-                                </attributedString>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vAQ-L4-Q1q">
                                 <rect key="frame" x="19" y="231" width="129" height="57"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -244,23 +269,43 @@
                                 <state key="normal" title="LOGIN">
                                     <color key="titleColor" red="0.94117647059999998" green="1" blue="0.25098039220000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
+                                <connections>
+                                    <action selector="signUpButton:" destination="v1Q-pY-z3u" eventType="touchUpInside" id="WWb-LV-RWF"/>
+                                </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Uq3-Ha-89M">
+                                <rect key="frame" x="19" y="165" width="97" height="32"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <attributedString key="attributedText">
+                                    <fragment content="e-Mail :">
+                                        <attributes>
+                                            <color key="NSColor" red="0.29019607843137252" green="0.12941176470588234" blue="0.39215686274509803" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <font key="NSFont" size="20" name="MesloLGLForPowerline-Bold"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="0.94117647059999998" green="1" blue="0.25098039220000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <viewLayoutGuide key="safeArea" id="ZIk-9U-hV1"/>
                     </view>
                     <connections>
-                        <segue destination="66D-XQ-khF" kind="show" identifier="1" id="DN0-Aq-DWf"/>
+                        <outlet property="nameTF" destination="QgW-h1-bkr" id="T7N-Zm-PJc"/>
+                        <outlet property="passwordTF" destination="HZW-d5-Byj" id="BhD-yk-jz6"/>
+                        <outlet property="usernamTF" destination="HfV-jv-ymz" id="Xr0-OR-6gk"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="PPa-yb-pBN" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-143" y="175"/>
         </scene>
-        <!--View Controller-->
+        <!--Login View Controller-->
         <scene sceneID="UJq-Uw-mdr">
             <objects>
-                <viewController id="6NE-oV-LAt" sceneMemberID="viewController">
+                <viewController id="6NE-oV-LAt" customClass="LoginViewController" customModule="Parkour" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="380-Js-mgm">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -322,6 +367,9 @@
                                 <state key="normal" title="LOGIN">
                                     <color key="titleColor" red="0.2901960784" green="0.12941176469999999" blue="0.3921568627" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
+                                <connections>
+                                    <action selector="loginButton:" destination="6NE-oV-LAt" eventType="touchUpInside" id="aCB-Zc-Xd5"/>
+                                </connections>
                             </button>
                             <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Xc5-cj-8ax">
                                 <rect key="frame" x="148" y="281" width="211" height="34"/>
@@ -336,7 +384,9 @@
                         <viewLayoutGuide key="safeArea" id="18z-SE-Twe"/>
                     </view>
                     <connections>
-                        <segue destination="66D-XQ-khF" kind="show" identifier="1" id="cpS-nT-LMS"/>
+                        <outlet property="passworTF" destination="Xc5-cj-8ax" id="uTO-Od-jL3"/>
+                        <outlet property="userNameTF" destination="Fvm-H0-dkY" id="FSt-Yq-lLJ"/>
+                        <segue destination="M0E-pd-MLQ" kind="show" identifier="1" id="rOC-Sd-rSY"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rqf-fQ-edv" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -364,12 +414,12 @@
             <point key="canvasLocation" x="812" y="-546"/>
         </scene>
         <!--Navigation Controller-->
-        <scene sceneID="3sy-Yi-ggH">
+        <scene sceneID="n6x-Fn-qsd">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="66D-XQ-khF" sceneMemberID="viewController">
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="M0E-pd-MLQ" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationItem key="navigationItem" id="wyc-EG-Std"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="yZ0-gg-CnA">
+                    <navigationItem key="navigationItem" id="H0H-WL-ViQ"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="jVO-eS-aE5">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="tintColor" red="0.94117647059999998" green="1" blue="0.25098039220000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -377,18 +427,18 @@
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
-                        <segue destination="Imj-v5-HTw" kind="relationship" relationship="rootViewController" id="4dz-jE-hhn"/>
+                        <segue destination="Imj-v5-HTw" kind="relationship" relationship="rootViewController" id="oWv-2S-vgC"/>
                     </connections>
                 </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="hiU-2O-nMM" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="W4H-KZ-hGP" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-143" y="975"/>
+            <point key="canvasLocation" x="2353" y="175"/>
         </scene>
     </scenes>
     <resources>
         <image name="location" width="170" height="170"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="DN0-Aq-DWf"/>
+        <segue reference="zpU-cf-48g"/>
     </inferredMetricsTieBreakers>
 </document>

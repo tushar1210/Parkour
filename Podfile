@@ -12,4 +12,5 @@ pod 'Firebase/Database'
 pod 'SwiftyJSON'
 pod 'Alamofire'
 pod 'lottie-ios'
+pod 'SVProgressHUD'
 end

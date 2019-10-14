@@ -60,6 +60,7 @@ PODS:
     - nanopb/encode (= 0.3.901)
   - nanopb/decode (0.3.901)
   - nanopb/encode (0.3.901)
+  - SVProgressHUD (2.2.5)
   - SwiftyJSON (5.0.0)
 
 DEPENDENCIES:
@@ -67,6 +68,7 @@ DEPENDENCIES:
   - Firebase/Core
   - Firebase/Database
   - lottie-ios
+  - SVProgressHUD
   - SwiftyJSON
 
 SPEC REPOS:
@@ -83,6 +85,7 @@ SPEC REPOS:
     - leveldb-library
     - lottie-ios
     - nanopb
+    - SVProgressHUD
     - SwiftyJSON
 
 SPEC CHECKSUMS:
@@ -98,8 +101,9 @@ SPEC CHECKSUMS:
   leveldb-library: 08cba283675b7ed2d99629a4bc5fd052cd2bb6a5
   lottie-ios: 9467723922dfff46f6d4e3019c32594a62440b7c
   nanopb: 2901f78ea1b7b4015c860c2fdd1ea2fee1a18d48
+  SVProgressHUD: 1428aafac632c1f86f62aa4243ec12008d7a51d6
   SwiftyJSON: 36413e04c44ee145039d332b4f4e2d3e8d6c4db7
 
-PODFILE CHECKSUM: 4f2c6eb8fcc23a7115c21bfa00858a86cd4aebd0
+PODFILE CHECKSUM: 39694f17ece1c7c615afb8ea763320d1c29fbe2c
 
 COCOAPODS: 1.7.5
