@@ -27,6 +27,7 @@ class SignUpViewController: UIViewController {
     }
     
     override func viewDidAppear(_ animated: Bool) {
+        SVProgressHUD.dismiss()
         SVProgressHUD.setBackgroundColor(.purple)
         SVProgressHUD.setForegroundColor(.yellow)
     }
@@ -66,6 +67,8 @@ class SignUpViewController: UIViewController {
         let json:NSDictionary = ["username":usernamTF.text,"password":passwordTF.text,"name":nameTF.text]
         db.setValue(json)
         SVProgressHUD.dismiss()
+        user=usernamTF.text!
+        name = nameTF.text!
         performSegue(withIdentifier: "1", sender: nil)
     }
     

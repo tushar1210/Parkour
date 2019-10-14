@@ -11,12 +11,13 @@ import Firebase
 import SwiftyJSON
 import SVProgressHUD
 
-class LoginViewController: UIViewController {
+class LoginViewController: UIViewController,UIAdaptivePresentationControllerDelegate {
 
     @IBOutlet weak var userNameTF: UITextField!
     @IBOutlet weak var passworTF: UITextField!
     
     var val = JSON()
+    var autoId = String()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -27,10 +28,11 @@ class LoginViewController: UIViewController {
         SVProgressHUD.setBackgroundColor(.purple)
         SVProgressHUD.setForegroundColor(.yellow)
     }
-    
+
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         self.view.endEditing(true)
     }
+
     
     func validated(){
         SVProgressHUD.show()
@@ -40,8 +42,11 @@ class LoginViewController: UIViewController {
             SVProgressHUD.show()
             for (key,subJson):(String, JSON) in self.val {
                 if subJson["username"].stringValue==self.userNameTF.text && subJson["password"].stringValue==self.passworTF.text{
+                    self.autoId = key
                     print("success")
                     SVProgressHUD.dismiss()
+                    name = subJson["name"].stringValue
+                    user = subJson["username"].stringValue
                     self.performSegue(withIdentifier: "1", sender: nil)
                 }
                 else{
@@ -58,9 +63,12 @@ class LoginViewController: UIViewController {
         
     }
     
+    
     @IBAction func loginButton(_ sender: Any) {
         if userNameTF.text != "" && passworTF.text != "" {
             validated()
+        }else{
+            SVProgressHUD.dismiss()
         }
     }
     
