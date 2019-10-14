@@ -25,14 +25,20 @@ class MapViewController: UIViewController, CLLocationManagerDelegate,MKMapViewDe
         locationManager.requestAlwaysAuthorization()
         locationManager.requestWhenInUseAuthorization()
         locationManager.desiredAccuracy = kCLLocationAccuracyNearestTenMeters
-        
+        locView.layer.cornerRadius = 30
         
     }
         
     override func viewDidAppear(_ animated: Bool) {
         locationManager.startUpdatingLocation()
         var timer = Timer.scheduledTimer(withTimeInterval: 1, repeats: false) { (timer) in
+            print("TIMER1")
             self.locationManager.stopUpdatingLocation()
+            let annotation = MKPointAnnotation()
+            annotation.coordinate = CLLocationCoordinate2D(latitude: self.lat, longitude: self.long)
+            self.locView.addAnnotation(annotation)
+            self.locView.showsUserLocation = true
+            
         }
     }
     
@@ -46,6 +52,9 @@ class MapViewController: UIViewController, CLLocationManagerDelegate,MKMapViewDe
                guard let city = city, let country = country, error == nil else { return }
             self.locLabel.text = city
         }
+        let center = CLLocationCoordinate2D(latitude: location.coordinate.latitude, longitude: location.coordinate.longitude)
+        var region = MKCoordinateRegion(center: center, span: MKCoordinateSpan(latitudeDelta: 0.95, longitudeDelta: 0.95))
+        locView.setRegion(region, animated: true)
     }
     func fetchCityAndCountry(from location: CLLocation, completion: @escaping (_ city: String?, _ country:  String?, _ error: Error?) -> ()) {
         CLGeocoder().reverseGeocodeLocation(location) { placemarks, error in
