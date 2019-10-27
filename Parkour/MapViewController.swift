@@ -22,11 +22,19 @@ class MapViewController: UIViewController, CLLocationManagerDelegate,MKMapViewDe
         super.viewDidLoad()
         locView.delegate=self
         locationManager.delegate=self
+        locView.layer.cornerRadius = 10
         locationManager.requestAlwaysAuthorization()
         locationManager.requestWhenInUseAuthorization()
         locationManager.desiredAccuracy = kCLLocationAccuracyNearestTenMeters
         
-        
+        locView.delegate = self
+           locView.mapType = .standard
+           locView.isZoomEnabled = true
+           locView.isScrollEnabled = true
+
+           if let coor = locView.userLocation.location?.coordinate{
+               locView.setCenter(coor, animated: true)
+           }
     }
         
     override func viewDidAppear(_ animated: Bool) {
@@ -37,10 +45,19 @@ class MapViewController: UIViewController, CLLocationManagerDelegate,MKMapViewDe
     }
     
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
-        guard let locValue: CLLocationCoordinate2D = manager.location?.coordinate else { return }
-        print("locations = \(locValue.latitude) \(locValue.longitude)")
-        lat = locValue.latitude
-        long = locValue.longitude
+        let locValue:CLLocationCoordinate2D = manager.location!.coordinate
+            lat = locValue.latitude
+            long = locValue.longitude
+        locView.mapType = MKMapType.standard
+        let span = MKCoordinateSpan(latitudeDelta: 0.0005, longitudeDelta: 0.0005)
+        let region = MKCoordinateRegion(center: locValue, span: span)
+        locView.setRegion(region, animated: true)
+
+        let annotation = MKPointAnnotation()
+        annotation.coordinate = locValue
+        annotation.title = name
+        annotation.subtitle = "Current location"
+        locView.addAnnotation(annotation)
         guard let location: CLLocation = manager.location else { return }
            fetchCityAndCountry(from: location) { city, country, error in
                guard let city = city, let country = country, error == nil else { return }

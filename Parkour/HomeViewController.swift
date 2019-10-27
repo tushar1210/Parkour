@@ -12,6 +12,8 @@ import UIKit
 class HomeViewController: UIViewController,UIAdaptivePresentationControllerDelegate{
     
     @IBOutlet weak var locationButton: UIButton!
+    @IBOutlet weak var rent: UIButton!
+    @IBOutlet weak var rout: UIButton!
     
     @IBOutlet weak var hiLabel: UILabel!
     
@@ -22,6 +24,8 @@ class HomeViewController: UIViewController,UIAdaptivePresentationControllerDeleg
         super.viewDidLoad()
         
         hiLabel.text = "Hi, " + name
+        rent.layer.cornerRadius = 10
+        rout.layer.cornerRadius = 10
     }
     
     @IBAction func locationButton(_ sender: Any) {
