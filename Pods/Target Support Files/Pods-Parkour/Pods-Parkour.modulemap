@@ -1,0 +1,6 @@
+framework module Pods_Parkour {
+  umbrella header "Pods-Parkour-umbrella.h"
+
+  export *
+  module * { export * }
+}
