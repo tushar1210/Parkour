@@ -23,7 +23,7 @@ class HomeViewController: UIViewController,UIAdaptivePresentationControllerDeleg
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        hiLabel.text = "Hi, " + name
+        hiLabel.text = "Hi, " + newUser.name
         rent.layer.cornerRadius = 10
         rout.layer.cornerRadius = 10
     }

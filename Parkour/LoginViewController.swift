@@ -15,18 +15,20 @@ class LoginViewController: UIViewController,UIAdaptivePresentationControllerDele
 
     @IBOutlet weak var userNameTF: UITextField!
     @IBOutlet weak var passworTF: UITextField!
+    @IBOutlet weak var login: UIButton!
     
     var val = JSON()
-    var autoId = String()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
     }
     
+    
     override func viewDidAppear(_ animated: Bool) {
         SVProgressHUD.setBackgroundColor(.purple)
         SVProgressHUD.setForegroundColor(.yellow)
+        login.layer.cornerRadius = 5
     }
 
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
@@ -42,11 +44,11 @@ class LoginViewController: UIViewController,UIAdaptivePresentationControllerDele
             SVProgressHUD.show()
             for (key,subJson):(String, JSON) in self.val {
                 if subJson["username"].stringValue==self.userNameTF.text && subJson["password"].stringValue==self.passworTF.text{
-                    self.autoId = key
-                    print("success")
-                    SVProgressHUD.dismiss()
-                    name = subJson["name"].stringValue
-                    user = subJson["username"].stringValue
+                    print("success",subJson)
+                    newUser.name = subJson["name"].stringValue
+                    newUser.user = subJson["username"].stringValue
+                    newUser.uid = key
+                    
                     self.performSegue(withIdentifier: "1", sender: nil)
                 }
                 else{
@@ -59,6 +61,7 @@ class LoginViewController: UIViewController,UIAdaptivePresentationControllerDele
                     self.present(alertController, animated: true, completion: nil)
                 }
             }
+            SVProgressHUD.dismiss()
         }
         
     }

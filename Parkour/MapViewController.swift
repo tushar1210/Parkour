@@ -55,7 +55,7 @@ class MapViewController: UIViewController, CLLocationManagerDelegate,MKMapViewDe
 
         let annotation = MKPointAnnotation()
         annotation.coordinate = locValue
-        annotation.title = name
+        annotation.title = newUser.name
         annotation.subtitle = "Current location"
         locView.addAnnotation(annotation)
         guard let location: CLLocation = manager.location else { return }
