@@ -31,6 +31,7 @@
 		782AA4C023661B7800CFB453 /* Roboto Mono Thin for Powerline.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 782AA4AA23661B7800CFB453 /* Roboto Mono Thin for Powerline.ttf */; };
 		782AA4C123661B7800CFB453 /* Roboto-MediumItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 782AA4AB23661B7800CFB453 /* Roboto-MediumItalic.ttf */; };
 		782AA4C223661B7800CFB453 /* Roboto-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 782AA4AC23661B7800CFB453 /* Roboto-Regular.ttf */; };
+		782AA4C423670AA500CFB453 /* RentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 782AA4C323670AA500CFB453 /* RentViewController.swift */; };
 		789A9080232FB37A00A8970C /* 3532-car.json in Resources */ = {isa = PBXBuildFile; fileRef = 789A907F232FB37A00A8970C /* 3532-car.json */; };
 		78B41685234E7C38004FD3B6 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 78B41684234E7C37004FD3B6 /* GoogleService-Info.plist */; };
 		78B41687234ED8C8004FD3B6 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78B41686234ED8C8004FD3B6 /* LoginViewController.swift */; };
@@ -69,6 +70,7 @@
 		782AA4AA23661B7800CFB453 /* Roboto Mono Thin for Powerline.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto Mono Thin for Powerline.ttf"; sourceTree = "<group>"; };
 		782AA4AB23661B7800CFB453 /* Roboto-MediumItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-MediumItalic.ttf"; sourceTree = "<group>"; };
 		782AA4AC23661B7800CFB453 /* Roboto-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Regular.ttf"; sourceTree = "<group>"; };
+		782AA4C323670AA500CFB453 /* RentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = RentViewController.swift; path = Parkour/RentViewController.swift; sourceTree = SOURCE_ROOT; };
 		789A907E232FB0E300A8970C /* Meslo LG L Bold for Powerline.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Meslo LG L Bold for Powerline.ttf"; sourceTree = "<group>"; };
 		789A907F232FB37A00A8970C /* 3532-car.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "3532-car.json"; sourceTree = "<group>"; };
 		78B41684234E7C37004FD3B6 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
@@ -159,12 +161,13 @@
 				78B41688234ED8D3004FD3B6 /* SignUpViewController.swift */,
 				78B4168A234ED8E1004FD3B6 /* Constants.swift */,
 				7824003E234E6CC80014452F /* HomeViewController.swift */,
+				782AA4C323670AA500CFB453 /* RentViewController.swift */,
 				78C70554232BCBD000E45965 /* Assets.xcassets */,
 				78C70556232BCBD000E45965 /* LaunchScreen.storyboard */,
 				78C70559232BCBD000E45965 /* Info.plist */,
 				789A907F232FB37A00A8970C /* 3532-car.json */,
-				782AA49623661B6900CFB453 /* Fonts */,
 				78B41684234E7C37004FD3B6 /* GoogleService-Info.plist */,
+				782AA49623661B6900CFB453 /* Fonts */,
 			);
 			path = Parkour;
 			sourceTree = "<group>";
@@ -329,6 +332,7 @@
 				78B41687234ED8C8004FD3B6 /* LoginViewController.swift in Sources */,
 				78C70550232BCBCC00E45965 /* ViewController.swift in Sources */,
 				78C7054E232BCBCC00E45965 /* AppDelegate.swift in Sources */,
+				782AA4C423670AA500CFB453 /* RentViewController.swift in Sources */,
 				7824003F234E6CC80014452F /* HomeViewController.swift in Sources */,
 				78B41689234ED8D3004FD3B6 /* SignUpViewController.swift in Sources */,
 				78B4168B234ED8E1004FD3B6 /* Constants.swift in Sources */,
