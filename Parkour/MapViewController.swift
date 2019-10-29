@@ -25,7 +25,7 @@ class MapViewController: UIViewController, CLLocationManagerDelegate,MKMapViewDe
         locView.layer.cornerRadius = 10
         locationManager.requestAlwaysAuthorization()
         locationManager.requestWhenInUseAuthorization()
-        locationManager.desiredAccuracy = kCLLocationAccuracyNearestTenMeters
+        locationManager.desiredAccuracy = kCLLocationAccuracyThreeKilometers
         
         locView.delegate = self
            locView.mapType = .standard
@@ -39,15 +39,18 @@ class MapViewController: UIViewController, CLLocationManagerDelegate,MKMapViewDe
         
     override func viewDidAppear(_ animated: Bool) {
         locationManager.startUpdatingLocation()
-        var timer = Timer.scheduledTimer(withTimeInterval: 1, repeats: false) { (timer) in
+        var timer = Timer.scheduledTimer(withTimeInterval: 0.05, repeats: false) { (timer) in
             self.locationManager.stopUpdatingLocation()
         }
     }
     
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
+        
         let locValue:CLLocationCoordinate2D = manager.location!.coordinate
             lat = locValue.latitude
             long = locValue.longitude
+        newUser.outLat = String(lat)
+        newUser.outLon = String(long)
         locView.mapType = MKMapType.standard
         let span = MKCoordinateSpan(latitudeDelta: 0.0005, longitudeDelta: 0.0005)
         let region = MKCoordinateRegion(center: locValue, span: span)
@@ -62,6 +65,7 @@ class MapViewController: UIViewController, CLLocationManagerDelegate,MKMapViewDe
            fetchCityAndCountry(from: location) { city, country, error in
                guard let city = city, let country = country, error == nil else { return }
             self.locLabel.text = city
+            newUser.city = city
         }
     }
     func fetchCityAndCountry(from location: CLLocation, completion: @escaping (_ city: String?, _ country:  String?, _ error: Error?) -> ()) {

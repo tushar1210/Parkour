@@ -72,6 +72,7 @@ class SignUpViewController: UIViewController {
         SVProgressHUD.dismiss()
         newUser.user=usernamTF.text!
         newUser.name = nameTF.text!
+        newUser.password = passwordTF.text!
         newUser.uid = db.key as! String
         performSegue(withIdentifier: "1", sender: nil)
     }

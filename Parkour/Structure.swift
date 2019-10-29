@@ -19,7 +19,11 @@ struct User {
     var rentIn_OutTime = ""
     var rentOut_OutTime = ""
     var rentOut_InTime = ""
-    
+    var mag1=""
+    var mag2=""
+    var city = ""
+    var outLat = ""
+    var outLon = ""
 }
 
 var newUser = User()

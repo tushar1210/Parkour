@@ -48,7 +48,7 @@ class LoginViewController: UIViewController,UIAdaptivePresentationControllerDele
                     newUser.name = subJson["name"].stringValue
                     newUser.user = subJson["username"].stringValue
                     newUser.uid = key
-                    
+                    newUser.password = subJson["password"].stringValue
                     self.performSegue(withIdentifier: "1", sender: nil)
                 }
                 else{
