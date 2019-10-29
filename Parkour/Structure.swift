@@ -9,7 +9,7 @@ import Foundation
 
 struct User {
     var name = ""
-    var uid = ""
+    var uid = "-LsIgIrsbSmgGdgNxAjT"
     var password = ""
     var user = ""
     var rentin = ""

@@ -7,6 +7,9 @@
 //
 
 import UIKit
+import SwiftyJSON
+import SVProgressHUD
+import Firebase
 
 class InOutViewController: UIViewController {
 
@@ -22,6 +25,7 @@ class InOutViewController: UIViewController {
         `in`.addTarget(self, action: #selector(handler(sendeer:)), for: UIControl.Event.valueChanged)
         out.setValue(UIColor.purple, forKey: "textColor")
         `in`.setValue(UIColor.purple, forKey: "textColor")
+        book.layer.cornerRadius = 8
     }
     @objc func handler(sender: UIDatePicker) {
         let timeFormatter = DateFormatter()
@@ -41,6 +45,13 @@ class InOutViewController: UIViewController {
 
     
     @IBAction func book(_ sender: Any) {
+        newUser.rentin = "1"
+        var data = JSON()
+        var dat = ["count":newUser.count]
+        let ref = Database.database().reference().child("User").child(newUser.uid)
+        print(newUser.name)
+        data = JSON(newUser.count)
+        ref.setValue(dat)
         
     }
 }
