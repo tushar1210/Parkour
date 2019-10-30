@@ -97,7 +97,7 @@ class InOutViewController: UIViewController {
     @IBAction func book(_ sender: Any) {
         newUser.rentin = "1"
         let ref = Database.database().reference().child("User").child(newUser.uid)
-        var dat = ["count":newUser.count,"name":newUser.name,"password":newUser.password,"rentin":newUser.rentin,"rentout":newUser.rentout,"rentIn_InTime":newUser.rentIn_InTime,"rentIn_OutTime":newUser.rentIn_OutTime,"rentOut_OutTime":newUser.rentOut_OutTime,"rentOut_InTime":newUser.rentOut_InTime,"username":newUser.user,"mag1":newUser.mag1,"mag2":newUser.mag2,"city":newUser.city,"lat":newUser.outLat,"lon":newUser.outLon]
+        var dat = ["count":newUser.count,"name":newUser.name,"password":newUser.password,"rentin":newUser.rentin,"rentout":newUser.rentout,"rentIn_InTime":newUser.rentIn_InTime,"rentIn_OutTime":newUser.rentIn_OutTime,"rentOut_OutTime":newUser.rentOut_OutTime,"rentOut_InTime":newUser.rentOut_InTime,"username":newUser.user,"mag1":newUser.mag1,"mag2":newUser.mag2,"city":newUser.city,"lat":newUser.outLat,"lon":newUser.outLon,"count2":newUser.count1]
         
         if newUser.rentIn_InTime != "" || newUser.rentIn_OutTime != ""{
             calculate(inn: newUser.rentIn_InTime, outt: newUser.rentIn_OutTime)
@@ -106,7 +106,7 @@ class InOutViewController: UIViewController {
         let action = UIAlertAction(title: "OK", style: .default) { (action) in
             ref.setValue(dat)
             alert.dismiss(animated: true) {
-                self.openMapForPlace()
+               // self.openMapForPlace()
             }
         }
         let cancel = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)

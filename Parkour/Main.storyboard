@@ -79,6 +79,123 @@
             </objects>
             <point key="canvasLocation" x="812" y="174.96251874062969"/>
         </scene>
+        <!--Rent Out View Controller-->
+        <scene sceneID="uGV-Ez-Y8W">
+            <objects>
+                <viewController modalPresentationStyle="fullScreen" id="pf8-kY-Fmt" customClass="RentOutViewController" customModule="Parkour" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="zwJ-U7-EtM">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="647"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <slider opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="1" minValue="1" maxValue="10" translatesAutoresizingMaskIntoConstraints="NO" id="5iE-8S-x5r">
+                                <rect key="frame" x="91" y="253" width="171" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="tintColor" red="0.267678529" green="0.16778776049999999" blue="0.38075184820000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <connections>
+                                    <action selector="slider:" destination="pf8-kY-Fmt" eventType="valueChanged" id="6UI-Nw-HTy"/>
+                                </connections>
+                            </slider>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="1" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="15" translatesAutoresizingMaskIntoConstraints="NO" id="SkX-6A-Pgd">
+                                <rect key="frame" x="167" y="331" width="40" height="36"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Roboto-Bold" family="Roboto" pointSize="30"/>
+                                <color key="textColor" red="0.267678529" green="0.16778776049999999" blue="0.38075184820000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="T0Y-oA-b3N">
+                                <rect key="frame" x="93" y="540" width="188" height="46"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.2901960784" green="0.12941176469999999" blue="0.3921568627" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" name="Roboto-Bold" family="Roboto" pointSize="28"/>
+                                <state key="normal" title="Next -&gt;">
+                                    <color key="titleColor" systemColor="systemYellowColor" red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <segue destination="4jE-K0-29H" kind="show" id="LIB-sx-ZzV"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="No of free spots :" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZP0-sp-2rh">
+                                <rect key="frame" x="16" y="128" width="272" height="42"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Roboto-Bold" family="Roboto" pointSize="35"/>
+                                <color key="textColor" red="0.267678529" green="0.16778776049999999" blue="0.38075184820000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemYellowColor" red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <viewLayoutGuide key="safeArea" id="XS0-xF-nL1"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="9SI-UF-Lly"/>
+                    <connections>
+                        <outlet property="nex" destination="T0Y-oA-b3N" id="npx-Zi-Ofn"/>
+                        <outlet property="slider" destination="5iE-8S-x5r" id="lBI-RJ-9y9"/>
+                        <outlet property="sliderLabel" destination="SkX-6A-Pgd" id="xxK-eW-szf"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ryT-h6-4QX" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3174" y="-537"/>
+        </scene>
+        <!--Out View Controller-->
+        <scene sceneID="gy5-fL-VF3">
+            <objects>
+                <viewController modalPresentationStyle="fullScreen" id="4jE-K0-29H" customClass="OutViewController" customModule="Parkour" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="b8I-yx-ZFi">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="647"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Park-In Time :" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YBB-bY-wjt">
+                                <rect key="frame" x="16" y="86" width="223" height="42"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Roboto-Bold" family="Roboto" pointSize="35"/>
+                                <color key="textColor" red="0.267678529" green="0.16778776049999999" blue="0.38075184820000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <datePicker contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="time" minuteInterval="30" translatesAutoresizingMaskIntoConstraints="NO" id="GbF-Dp-jY4">
+                                <rect key="frame" x="0.0" y="136" width="375" height="162"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                <color key="tintColor" red="0.267678529" green="0.16778776049999999" blue="0.38075184820000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </datePicker>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Park-Out Time :" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HfU-Hd-ht7">
+                                <rect key="frame" x="16" y="306" width="249" height="42"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Roboto-Bold" family="Roboto" pointSize="35"/>
+                                <color key="textColor" red="0.267678529" green="0.16778776049999999" blue="0.38075184820000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <datePicker contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="time" minuteInterval="30" translatesAutoresizingMaskIntoConstraints="NO" id="2zT-nU-WI4">
+                                <rect key="frame" x="0.0" y="356" width="375" height="162"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                <color key="tintColor" red="0.267678529" green="0.16778776049999999" blue="0.38075184820000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </datePicker>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ImA-Mn-aEH">
+                                <rect key="frame" x="60" y="559" width="255" height="46"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.2901960784" green="0.12941176469999999" blue="0.3921568627" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" name="Roboto-Bold" family="Roboto" pointSize="28"/>
+                                <state key="normal" title="Book My Spot !">
+                                    <color key="titleColor" systemColor="systemYellowColor" red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="book:" destination="BWy-tG-0Hw" eventType="touchUpInside" id="7W3-MI-LDp"/>
+                                    <action selector="bookk:" destination="4jE-K0-29H" eventType="touchUpInside" id="azV-ER-ZOZ"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemYellowColor" red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <viewLayoutGuide key="safeArea" id="6ud-WZ-Siq"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="pfH-DY-Ja9"/>
+                    <connections>
+                        <outlet property="bookk" destination="ImA-Mn-aEH" id="kzt-GT-Op5"/>
+                        <outlet property="inn" destination="GbF-Dp-jY4" id="8Bb-Ic-Ele"/>
+                        <outlet property="out" destination="2zT-nU-WI4" id="d4m-v3-hQc"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="KPQ-Ct-BlF" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4002" y="-529"/>
+        </scene>
         <!--Home View Controller-->
         <scene sceneID="2sk-YH-pe3">
             <objects>
@@ -95,6 +212,9 @@
                                 <state key="normal" title="RENT OUT A SPACE">
                                     <color key="titleColor" systemColor="systemYellowColor" red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
+                                <connections>
+                                    <segue destination="pf8-kY-Fmt" kind="show" id="aJR-wL-tXK"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleAspectFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0kn-X5-zub">
                                 <rect key="frame" x="301" y="82" width="60" height="60"/>
@@ -134,7 +254,7 @@
                                 </connections>
                             </button>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Untitled-1" translatesAutoresizingMaskIntoConstraints="NO" id="K9w-WI-1tc">
-                                <rect key="frame" x="143" y="505" width="290.00000000000045" height="142"/>
+                                <rect key="frame" x="143" y="505" width="290" height="142"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="142" id="7ho-5v-T4e"/>
                                     <constraint firstAttribute="width" constant="290" id="H0v-4o-uYi"/>
@@ -541,7 +661,7 @@
         <image name="location.circle" catalog="system" width="64" height="62"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="rOC-Sd-rSY"/>
+        <segue reference="Dl5-pm-1q6"/>
         <segue reference="zpU-cf-48g"/>
     </inferredMetricsTieBreakers>
 </document>

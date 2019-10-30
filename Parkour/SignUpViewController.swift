@@ -35,45 +35,43 @@ class SignUpViewController: UIViewController {
     var flag = 0
     func check(){
         let ref = Database.database().reference().child("User")
-        ref.observe(.value) { (data) in
+        ref.observeSingleEvent(of: .value) { (data) in
             let json = JSON(data.value)
-            print("\n\n\n",json)
-            
             for (key,subJson):(String,JSON) in json{
-                print("\nsub json\n",subJson)
                 if subJson["username"].stringValue != self.usernamTF.text{
-                    print("IF")
                     self.flag=1
-                    
                 }else{
-                    let alertController = UIAlertController(title: "Sign Up", message: "Username already taken.", preferredStyle: .alert)
-                    let action = UIAlertAction(title: "OK", style: .default) { (action) in
-                        alertController.dismiss(animated: true, completion: nil)
-                    }
                     self.flag=0
-                    SVProgressHUD.dismiss()
-                    alertController.addAction(action)
-                        self.present(alertController, animated: true, completion: nil)
                 }
             }
             if self.flag==1{
+                    print("aiyoo")
                 self.validate()
+            }
+            else{
+                let alertController = UIAlertController(title: "Sign Up", message: "Username already taken.", preferredStyle: .alert)
+                let action = UIAlertAction(title: "OK", style: .default) { (action) in
+                    alertController.dismiss(animated: true, completion: nil)
+                }
+                self.flag=0
+                SVProgressHUD.dismiss()
+                alertController.addAction(action)
+                    self.present(alertController, animated: true, completion: nil)
             }
             
         }
     }
     
     func validate(){
-        
-        
         let db = Database.database().reference().child("User").childByAutoId()
         let json:NSDictionary = ["username":usernamTF.text,"password":passwordTF.text,"name":nameTF.text]
         db.setValue(json)
-        SVProgressHUD.dismiss()
+        print("aiyoo1")
         newUser.user=usernamTF.text!
         newUser.name = nameTF.text!
         newUser.password = passwordTF.text!
         newUser.uid = db.key as! String
+        SVProgressHUD.dismiss()
         performSegue(withIdentifier: "1", sender: nil)
     }
     
