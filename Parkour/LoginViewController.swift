@@ -21,7 +21,13 @@ class LoginViewController: UIViewController,UIAdaptivePresentationControllerDele
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        SVProgressHUD.show()
+        let db = Database.database().reference().child("User")
+        db.observeSingleEvent(of: .value) { (data) in
+            self.val = JSON(data.value)
+            print(self.val)
+            SVProgressHUD.dismiss()
+        }
     }
     
     
@@ -38,11 +44,7 @@ class LoginViewController: UIViewController,UIAdaptivePresentationControllerDele
     
     func validated(){
         SVProgressHUD.show()
-        let db = Database.database().reference().child("User")
-        db.observe(.value) { (data) in
-            self.val = JSON(data.value)
-            SVProgressHUD.show()
-            for (key,subJson):(String, JSON) in self.val {
+            for (key,subJson):(String, JSON) in val {
                 if subJson["username"].stringValue==self.userNameTF.text && subJson["password"].stringValue==self.passworTF.text{
                     print("success",subJson)
                     newUser.name = subJson["name"].stringValue
@@ -63,8 +65,7 @@ class LoginViewController: UIViewController,UIAdaptivePresentationControllerDele
             }
             SVProgressHUD.dismiss()
         }
-        
-    }
+
     
     
     @IBAction func loginButton(_ sender: Any) {
