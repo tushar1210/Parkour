@@ -51,7 +51,7 @@ class MapViewController: UIViewController, CLLocationManagerDelegate,MKMapViewDe
             long = locValue.longitude
         newUser.outLat = String(lat)
         newUser.outLon = String(long)
-        print(lat,long)
+//        print(lat,long)
         locView.mapType = MKMapType.standard
         let span = MKCoordinateSpan(latitudeDelta: 0.0005, longitudeDelta: 0.0005)
         let region = MKCoordinateRegion(center: locValue, span: span)

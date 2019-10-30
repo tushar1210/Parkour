@@ -90,7 +90,7 @@ class InOutViewController: UIViewController {
             mag = 0-mag + 12
         }
         let cost = mag*50
-        print("COST" , cost)
+//        print("COST" , cost)
         newUser.mag1 = String(cost)
     }
     
@@ -107,6 +107,12 @@ class InOutViewController: UIViewController {
             ref.setValue(dat)
             alert.dismiss(animated: true) {
                // self.openMapForPlace()
+                let al = UIAlertController(title: "Success", message: "Your booking has been successfully made.", preferredStyle: .alert)
+                let act = UIAlertAction(title: "OK", style: .default) { (action) in
+                    self.performSegue(withIdentifier: "1", sender: nil)
+                }
+                al.addAction(act)
+                self.present(al,animated: true)
             }
         }
         let cancel = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)

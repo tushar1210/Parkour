@@ -63,7 +63,7 @@ class OutViewController: UIViewController {
             mag = 0-mag + 12
         }
         let cost = mag*50
-        print("COST" , cost)
+//        print("COST" , cost)
         newUser.mag2 = String(cost)
     }
     
@@ -76,17 +76,25 @@ class OutViewController: UIViewController {
             calculate(inn: newUser.rentOut_InTime, outt: newUser.rentOut_OutTime)
         }
         let alert = UIAlertController(title: "Confirm Lease ?", message: "Do you want to rent-out space from \(newUser.rentOut_InTime) to \(newUser.rentOut_OutTime)", preferredStyle: .alert)
+        let al = UIAlertController(title: "Succesful", message: "Your booking has been confirmed", preferredStyle: .alert)
+        let act = UIAlertAction(title: "OK", style: .default) { (action) in
+            self.performSegue(withIdentifier: "1", sender: nil)
+        }
+        al.addAction(act)
         let action = UIAlertAction(title: "OK", style: .default) { (action) in
             ref.setValue(dat)
+//            self.performSegue(withIdentifier: "1", sender: nil)
             alert.dismiss(animated: true) {
-               // self.openMapForPlace()
+                self.present(al,animated: true)
             }
         }
         let cancel = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
         alert.addAction(cancel)
         alert.addAction(action)
         self.present(alert, animated: true)
+//        performSegue(withIdentifier: "1", sender: nil)
 
+                
     }
     
     }

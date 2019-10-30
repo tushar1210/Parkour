@@ -10,6 +10,8 @@ import UIKit
 import Firebase
 import SwiftyJSON
 import SVProgressHUD
+import MapKit
+import CoreLocation
 
 class CheckViewController: UIViewController {
 
@@ -25,51 +27,58 @@ class CheckViewController: UIViewController {
     var arr = [JSON()]
     override func viewDidLoad() {
         super.viewDidLoad()
+        container.layer.cornerRadius = 10
         SVProgressHUD.show()
-        let ref = Database.database().reference().child(newUser.uid)
-        ref.observeSingleEvent(of: .value) { (snap) in
+        let ref = Database.database().reference().child("User")
+        ref.observe(.value) { (snap) in
             self.dat = JSON(snap.value)
             self.check()
+            
         }
     }
     func check(){
         for (key,subJson):(String,JSON) in dat{
             if key != newUser.uid{
-                if subJson["rentout"] != "0" && subJson["count2"] != "0"{
+                if subJson["rentout"].stringValue != "0" && subJson["count2"].stringValue != "0"{
                     arr.append(subJson)
                     
                 }
             }
         }
-        name.text = arr[0]["rentOut_InTime"].stringValue+arr[0]["rentOut_OutTime"].stringValue
-        ctr.text = arr[0]["count2"].stringValue
-        city.text = arr[0]["city"].stringValue
+        print(arr[1])
+        name.text = arr[1]["rentOut_InTime"].stringValue+" - "+arr[1]["rentOut_OutTime"].stringValue
+        ctr.text = arr[1]["count2"].stringValue + " Spaces"
+        city.text = arr[1]["city"].stringValue
+        print(arr[1]["username"].string)
         SVProgressHUD.dismiss()
     }
     override func viewDidAppear(_ animated: Bool) {
         SVProgressHUD.setBackgroundColor(.purple)
         SVProgressHUD.setForegroundColor(.yellow)
     }
+    func openMapForPlace() {
+
+        let lat1 : NSString = NSString(string: arr[1]["lat"].stringValue)
+        let lng1 : NSString = NSString(string: arr[1]["lon"].stringValue)
+
+        let latitude:CLLocationDegrees =  lat1.doubleValue
+        let longitude:CLLocationDegrees =  lng1.doubleValue
+
+        let regionDistance:CLLocationDistance = 10000
+        let coordinates = CLLocationCoordinate2DMake(latitude, longitude)
+        let regionSpan = MKCoordinateRegion(center: coordinates, latitudinalMeters: regionDistance, longitudinalMeters: regionDistance)
+        let options = [
+            MKLaunchOptionsMapCenterKey: NSValue(mkCoordinate: regionSpan.center),
+            MKLaunchOptionsMapSpanKey: NSValue(mkCoordinateSpan: regionSpan.span)
+        ]
+        let placemark = MKPlacemark(coordinate: coordinates, addressDictionary: nil)
+        let mapItem = MKMapItem(placemark: placemark)
+        mapItem.name = "Destination"
+        mapItem.openInMaps(launchOptions: options)
+
+    }
     @IBAction func go(_ sender: Any) {
-        
+        openMapForPlace()
     }
 }
 
-//extension CheckViewController{
-//    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-//        return 1
-//    }
-//    func numberOfSections(in tableView: UITableView) -> Int {
-//        return arr.count
-//    }
-//
-//    func tableView(_ tableView: UITableView, viewForFooterInSection section: Int) -> UIView? {
-//        let footer = UIView()
-//        footer.backgroundColor = .clear
-//        footer.frame = CGRect(x: 0, y: 0, width: table.frame.width, height: 20)
-//        return footer
-//    }
-//    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-//        
-//    }
-//}

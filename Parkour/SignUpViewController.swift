@@ -45,7 +45,7 @@ class SignUpViewController: UIViewController {
                 }
             }
             if self.flag==1{
-                    print("aiyoo")
+                    
                 self.validate()
             }
             else{
@@ -66,7 +66,7 @@ class SignUpViewController: UIViewController {
         let db = Database.database().reference().child("User").childByAutoId()
         let json:NSDictionary = ["username":usernamTF.text,"password":passwordTF.text,"name":nameTF.text]
         db.setValue(json)
-        print("aiyoo1")
+       
         newUser.user=usernamTF.text!
         newUser.name = nameTF.text!
         newUser.password = passwordTF.text!

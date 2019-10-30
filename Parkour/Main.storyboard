@@ -79,7 +79,7 @@
             </objects>
             <point key="canvasLocation" x="812" y="174.96251874062969"/>
         </scene>
-        <!--Rent Out View Controller-->
+        <!--RENT OUT-->
         <scene sceneID="uGV-Ez-Y8W">
             <objects>
                 <viewController modalPresentationStyle="fullScreen" id="pf8-kY-Fmt" customClass="RentOutViewController" customModule="Parkour" customModuleProvider="target" sceneMemberID="viewController">
@@ -125,7 +125,7 @@
                         <color key="backgroundColor" systemColor="systemYellowColor" red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <viewLayoutGuide key="safeArea" id="XS0-xF-nL1"/>
                     </view>
-                    <navigationItem key="navigationItem" id="9SI-UF-Lly"/>
+                    <navigationItem key="navigationItem" title="RENT OUT" id="9SI-UF-Lly"/>
                     <connections>
                         <outlet property="nex" destination="T0Y-oA-b3N" id="npx-Zi-Ofn"/>
                         <outlet property="slider" destination="5iE-8S-x5r" id="lBI-RJ-9y9"/>
@@ -141,7 +141,7 @@
             <objects>
                 <viewController modalPresentationStyle="fullScreen" id="4jE-K0-29H" customClass="OutViewController" customModule="Parkour" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="b8I-yx-ZFi">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="647"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Park-In Time :" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YBB-bY-wjt">
@@ -152,7 +152,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <datePicker contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="time" minuteInterval="30" translatesAutoresizingMaskIntoConstraints="NO" id="GbF-Dp-jY4">
-                                <rect key="frame" x="0.0" y="136" width="375" height="162"/>
+                                <rect key="frame" x="-2" y="136" width="377" height="162"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                                 <color key="tintColor" red="0.267678529" green="0.16778776049999999" blue="0.38075184820000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </datePicker>
@@ -164,7 +164,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <datePicker contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="time" minuteInterval="30" translatesAutoresizingMaskIntoConstraints="NO" id="2zT-nU-WI4">
-                                <rect key="frame" x="0.0" y="356" width="375" height="162"/>
+                                <rect key="frame" x="-2" y="356" width="377" height="162"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                                 <color key="tintColor" red="0.267678529" green="0.16778776049999999" blue="0.38075184820000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </datePicker>
@@ -190,6 +190,7 @@
                         <outlet property="bookk" destination="ImA-Mn-aEH" id="kzt-GT-Op5"/>
                         <outlet property="inn" destination="GbF-Dp-jY4" id="8Bb-Ic-Ele"/>
                         <outlet property="out" destination="2zT-nU-WI4" id="d4m-v3-hQc"/>
+                        <segue destination="M0E-pd-MLQ" kind="show" identifier="1" id="kaY-ln-rPA"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="KPQ-Ct-BlF" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -254,7 +255,7 @@
                                 </connections>
                             </button>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Untitled-1" translatesAutoresizingMaskIntoConstraints="NO" id="K9w-WI-1tc">
-                                <rect key="frame" x="143" y="505" width="290" height="142"/>
+                                <rect key="frame" x="143" y="505" width="290.00000000000045" height="142"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="142" id="7ho-5v-T4e"/>
                                     <constraint firstAttribute="width" constant="290" id="H0v-4o-uYi"/>
@@ -284,7 +285,7 @@
             </objects>
             <point key="canvasLocation" x="3173.5999999999999" y="174.96251874062969"/>
         </scene>
-        <!--Rent View Controller-->
+        <!--RENT IN-->
         <scene sceneID="VGG-Hv-4Am">
             <objects>
                 <viewController modalPresentationStyle="fullScreen" id="wCS-c5-Euf" customClass="RentViewController" customModule="Parkour" customModuleProvider="target" sceneMemberID="viewController">
@@ -331,7 +332,7 @@
                         <color key="backgroundColor" systemColor="systemYellowColor" red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <viewLayoutGuide key="safeArea" id="5PL-q4-STi"/>
                     </view>
-                    <navigationItem key="navigationItem" id="vKn-W8-AC1"/>
+                    <navigationItem key="navigationItem" title="RENT IN" id="vKn-W8-AC1"/>
                     <connections>
                         <outlet property="nex" destination="DBX-2o-0a1" id="gqH-fG-uUA"/>
                         <outlet property="slider" destination="VLi-mN-vyw" id="NmF-eT-aHP"/>
@@ -380,6 +381,13 @@
                                     <action selector="book:" destination="BWy-tG-0Hw" eventType="touchUpInside" id="jdW-4h-AV7"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Park-In Time :" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wrY-Y2-xkW">
+                                <rect key="frame" x="16" y="92" width="223" height="42"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Roboto-Bold" family="Roboto" pointSize="35"/>
+                                <color key="textColor" red="0.267678529" green="0.16778776049999999" blue="0.38075184820000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemYellowColor" red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <viewLayoutGuide key="safeArea" id="lP2-l0-d9s"/>
@@ -389,7 +397,7 @@
                         <outlet property="book" destination="Rlk-cO-hca" id="e4T-O8-Ypi"/>
                         <outlet property="in" destination="rHK-vo-rkp" id="xr0-pM-vyW"/>
                         <outlet property="out" destination="EXp-op-jsE" id="epc-ls-KJT"/>
-                        <segue destination="AXQ-Af-IY6" kind="show" id="OR7-Au-2Ey"/>
+                        <segue destination="AXQ-Af-IY6" kind="show" identifier="1" id="OR7-Au-2Ey"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="UOp-UQ-g6y" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -424,8 +432,8 @@
                                             <action selector="go:" destination="AXQ-Af-IY6" eventType="touchUpInside" id="shn-zd-VL4"/>
                                         </connections>
                                     </button>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TWf-52-fpP">
-                                        <rect key="frame" x="20" y="24" width="77" height="34"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="15" translatesAutoresizingMaskIntoConstraints="NO" id="TWf-52-fpP">
+                                        <rect key="frame" x="20" y="24" width="312" height="34"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" name="Roboto-Bold" family="Roboto" pointSize="29"/>
                                         <color key="textColor" systemColor="systemYellowColor" red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -439,7 +447,7 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Ctr" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yJy-Vh-6PR">
-                                        <rect key="frame" x="20" y="133" width="77" height="34"/>
+                                        <rect key="frame" x="20" y="133" width="218" height="34"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" name="Roboto-Bold" family="Roboto" pointSize="29"/>
                                         <color key="textColor" systemColor="systemYellowColor" red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -448,6 +456,10 @@
                                 </subviews>
                                 <color key="backgroundColor" red="0.267678529" green="0.16778776049999999" blue="0.38075184820000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </view>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Untitled-1" translatesAutoresizingMaskIntoConstraints="NO" id="a2A-Dh-qad">
+                                <rect key="frame" x="133" y="505" width="290.00000000000045" height="142"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemYellowColor" red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <viewLayoutGuide key="safeArea" id="AKK-8v-f7g"/>
@@ -463,7 +475,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fyT-ZJ-jJx" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3998" y="1594"/>
+            <point key="canvasLocation" x="3997.5999999999999" y="1593.5532233883059"/>
         </scene>
         <!--Map View Controller-->
         <scene sceneID="oyE-z1-rao">
@@ -707,6 +719,10 @@
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="tintColor" red="0.94117647059999998" green="1" blue="0.25098039220000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <color key="barTintColor" red="0.2901960784" green="0.12941176469999999" blue="0.3921568627" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <textAttributes key="titleTextAttributes">
+                            <fontDescription key="fontDescription" name="Roboto-Bold" family="Roboto" pointSize="20"/>
+                            <color key="textColor" systemColor="systemYellowColor" red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        </textAttributes>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
@@ -725,7 +741,8 @@
         <image name="location.circle" catalog="system" width="64" height="62"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="rOC-Sd-rSY"/>
+        <segue reference="LIB-sx-ZzV"/>
+        <segue reference="kaY-ln-rPA"/>
         <segue reference="zpU-cf-48g"/>
     </inferredMetricsTieBreakers>
 </document>
